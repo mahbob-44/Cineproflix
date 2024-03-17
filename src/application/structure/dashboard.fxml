@@ -113,7 +113,7 @@
                         </FontAwesomeIcon>
                      </graphic>
                   </Button>
-                  <Button fx:id="signout" layoutX="26.0" layoutY="486.0" mnemonicParsing="false" styleClass="nav-btn" text="Sign Out" AnchorPane.leftAnchor="19.0">
+                  <Button fx:id="signout" layoutX="26.0" layoutY="486.0" mnemonicParsing="false" onAction="#admin_sign_out" styleClass="nav-btn" text="Sign Out" AnchorPane.leftAnchor="19.0">
                      <graphic>
                         <FontAwesomeIcon glyphName="SIGN_OUT" size="1.5em">
                            <fill>

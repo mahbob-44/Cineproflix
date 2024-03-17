@@ -196,6 +196,12 @@ public class dashboardcontroler implements Initializable{
         hall_no.setText("");
     }
 
+    @FXML
+    void admin_sign_out(ActionEvent event) {
+        signout.getScene().getWindow().hide();
+        Signout so= new Signout();
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources){
         show_list();

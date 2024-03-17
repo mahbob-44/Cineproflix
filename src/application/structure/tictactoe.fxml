@@ -76,7 +76,7 @@
          </bottom>
       </BorderPane>
       <Label fx:id="output_text" layoutX="104.0" layoutY="331.0" prefHeight="35.0" prefWidth="385.0" styleClass="predict" stylesheets="@../styles/style.css" textAlignment="JUSTIFY" textFill="#dd3939" />
-      <Button layoutX="257.0" layoutY="418.0" mnemonicParsing="false" onAction="#next_button" prefHeight="34.0" prefWidth="68.0" stylesheets="@../styles/dashboard.css" text="Next">
+      <Button fx:id="next_btn" layoutX="257.0" layoutY="418.0" mnemonicParsing="false" onAction="#next_button" prefHeight="34.0" prefWidth="68.0" stylesheets="@../styles/dashboard.css" text="Next">
          <styleClass>
             <String fx:value="add-btns" />
             <String fx:value="insert" />

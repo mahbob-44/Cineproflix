@@ -23,6 +23,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -77,6 +78,13 @@ public class userpaneldashboardcontroller implements Initializable{
 
     @FXML
     private TableView<movie> movielist;
+
+    
+    @FXML
+    private Button no_btn;
+
+    @FXML
+    private Button procced_btn;
 
     @FXML
     private Button signout;
@@ -157,7 +165,20 @@ public class userpaneldashboardcontroller implements Initializable{
 
     @FXML
     void dont_go_to_game(ActionEvent event) {
-
+        try {
+            Parent root=FXMLLoader.load(getClass().getResource("/application/structure/ticket.fxml"));
+            Scene scene=new Scene(root);
+            Stage primarStage=new Stage();
+            primarStage.setScene(scene);
+            no_btn.getScene().getWindow().hide();
+            Image icon= new Image(getClass().getResourceAsStream("/application/styles/logo.jpg"));
+            primarStage.getIcons().add(icon);
+            primarStage.show();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        
     }
 
     @FXML
@@ -167,6 +188,9 @@ public class userpaneldashboardcontroller implements Initializable{
             Scene scene=new Scene(root);
             Stage primaryStage=new Stage();
             primaryStage.setScene(scene);
+            procced_btn.getScene().getWindow().hide();
+            Image icon= new Image(getClass().getResourceAsStream("/application/styles/logo.jpg"));
+            primaryStage.getIcons().add(icon);
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -181,10 +205,18 @@ public class userpaneldashboardcontroller implements Initializable{
 
     }
 
+    @FXML
+    void user_sign_out(ActionEvent event) {
+        signout.getScene().getWindow().hide();
+        Signout so=new Signout();
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resourceBundle){
         show_list();
         username.setText(usrn);
+        user_dashboard.setVisible(true);
+        discount_choosing_page.setVisible(false);
         
     }
 

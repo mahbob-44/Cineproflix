@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -45,6 +46,10 @@ public class controller {
 
     @FXML
     private GridPane grid;
+
+    @FXML
+    private Button next_btn;
+
     private char currentPlayer = 'X';
     private Button[][] buttons=new Button[3][3];
     boolean flag=false;
@@ -91,6 +96,9 @@ public class controller {
             Scene scene =new Scene(root);
             Stage primarStage=new Stage();
             primarStage.setScene(scene);
+            next_btn.getScene().getWindow().hide();
+            Image icon= new Image(getClass().getResourceAsStream("/application/styles/logo.jpg"));
+            primarStage.getIcons().add(icon);
             primarStage.show();
         } catch (IOException e) {
             // TODO Auto-generated catch block

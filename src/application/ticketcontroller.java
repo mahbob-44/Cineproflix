@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
 
 public class ticketcontroller implements Initializable{
 
@@ -37,6 +38,8 @@ public class ticketcontroller implements Initializable{
 
     @FXML
     private Label total_price;
+
+    
 
     // Tools for database
     private Connection connect;
@@ -84,6 +87,7 @@ public class ticketcontroller implements Initializable{
                     movie_name.setText(result2.getString("title"));
                     total_price.setText(String.valueOf(Float.parseFloat(result2.getString("price"))-50));
                     // seat_number.setText(String.valueOf(51-Integer.parseInt(result2.getString("seats"))));
+                    decrese(Integer.parseInt(result2.getString("seats"))-1);
                 }
 
             } catch (Exception e) {
@@ -123,12 +127,46 @@ public class ticketcontroller implements Initializable{
                     hall_number.setText(String.valueOf(result2.getInt("hall_no")));
                     movie_name.setText(result2.getString("title"));
                     total_price.setText(String.valueOf(Float.parseFloat(result2.getString("price"))));
+                    decrese(Integer.parseInt(result2.getString("seats"))-1);
                     // seat_number.setText(String.valueOf(51-Integer.parseInt(result2.getString("seats"))));
                 }
 
             } catch (Exception e) {
                 // TODO: handle exception
             }
+        }
+    }
+
+    public void decrese(int seat){
+        if(seat>=0){
+            String sql="UPDATE movie set seats=? where title=?";
+            connect=sqliteConnection.connector();
+            try {
+                prepare=connect.prepareStatement(sql);
+                prepare.setString(1, String.valueOf(seat));
+                prepare.setString(2, movie.m_name);
+                prepare.executeUpdate();
+                if(seat==0){
+                    delete_movie();
+                }
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }
+        else{
+            delete_movie();
+        }
+    }
+
+    public void delete_movie(){
+        String sql="delete from movie where title=?";
+        connect=sqliteConnection.connector();
+        try {
+            prepare=connect.prepareStatement(sql);
+            prepare.setString(1, movie.m_name);
+            prepare.execute();
+        } catch (Exception e) {
+            // TODO: handle exception
         }
     }
 

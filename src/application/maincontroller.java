@@ -19,6 +19,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
@@ -176,7 +177,7 @@ public class maincontroller implements Initializable{
                     
                     dashboardcontroler.usrn=Signup_username.getText();
                     Stage stage=new Stage();
-                    Parent root= FXMLLoader.load(getClass().getResource("/application/structure/dashboard.fxml"));
+                    Parent root= FXMLLoader.load(getClass().getResource("/application/structure/userpanel.fxml"));
                     Scene scene=new Scene(root);
                     stage.setScene(scene);
                     stage.show();
@@ -230,6 +231,8 @@ public class maincontroller implements Initializable{
                         Parent root= FXMLLoader.load(getClass().getResource("/application/structure/dashboard.fxml"));
                         Scene scene=new Scene(root);
                         stage.setScene(scene);
+                        Image icon= new Image(getClass().getResourceAsStream("/application/styles/logo.jpg"));
+                        stage.getIcons().add(icon);
                         stage.show();
                     }
                     else{
@@ -238,6 +241,8 @@ public class maincontroller implements Initializable{
                         Parent root= FXMLLoader.load(getClass().getResource("/application/structure/userpanel.fxml"));
                         Scene scene=new Scene(root);
                         stage.setScene(scene);
+                        Image icon= new Image(getClass().getResourceAsStream("/application/styles/logo.jpg"));
+                        stage.getIcons().add(icon);
                         stage.show();
                     }
                 }
@@ -275,6 +280,16 @@ public class maincontroller implements Initializable{
         else if (loginmodel.isDBconnected()){
             isconnected.setText("Connected");
         }
+        Login_form.setVisible(true);
+        Signup_form.setVisible(false);
+        Signup_email.setText("");
+        Signup_username.setText("");
+        Signup_password.setText("");
+        name.setText("");
+        age.setText("");
+
+        Login_username.setText("");
+        Login_password.setText("");
     }
 
 }
