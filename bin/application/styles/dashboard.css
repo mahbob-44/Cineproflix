@@ -1,0 +1,134 @@
+.wellcome{
+    -fx-text-fill:linear-gradient(to top right,#0aeded,#e7f1f4);
+    -fx-font-family:'Agency FB';
+    -fx-alignment:CENTER;
+}
+.title{
+    -fx-text-fill:linear-gradient(to top right,#0aeded,#e7f1f4);
+    -fx-font-family: 'Agency FB';
+    -fx-font-size:1.5em;
+    -fx-font-weight:bold;
+}
+.nav-btn{
+    -fx-background-color:transparent;
+    -fx-font-size:1.5em;
+    -fx-font-family: 'Agency FB';
+    -fx-text-fill:linear-gradient(to top right,#0aeded,#e7f1f4);
+    -fx-alignment:CENTER_LEFT;
+}
+.nav-btn:hover{
+    -fx-background-color:gray;
+    -fx-cursor:hand;
+}
+.side-nav{
+    -fx-background-color:#414142;
+}
+.top-nav{
+    -fx-background-color:#414142;
+}
+.bg-white{
+    -fx-background-color:white;
+    -fx-effect:dropshadow(three-pass-box,rgba(0,0,0,.3),8,0,0,0);
+    -fx-background-radius: 10px;
+}
+
+.card1{
+    -fx-background-color:linear-gradient(to top right, #01513e,#09a682);
+    -fx-effect:dropshadow(three-pass-box,rgba(0,0,0,.3),8,0,0,0);
+    -fx-background-radius: 10px;
+}
+.card2{
+    -fx-background-color:linear-gradient(to top right, #060151,#0f1bc2);
+    -fx-effect:dropshadow(three-pass-box,rgba(0,0,0,.3),8,0,0,0);
+    -fx-background-radius: 10px; 
+}
+
+.card3{
+    -fx-background-color:linear-gradient(to top right, #510134,#c01111);
+    -fx-effect:dropshadow(three-pass-box,rgba(0,0,0,.3),8,0,0,0);
+    -fx-background-radius: 10px; 
+}
+
+
+.add-textfield{
+    -fx-background-color:white ;
+    -fx-border-width:1px;
+    -fx-border-radius:0px 8px 0px 0px;
+    -fx-border-color:black;
+    -fx-text-fill:rgb(12, 12, 12);
+    -fx-font-family:'Agency FB';
+    -fx-font-size:1.2em;
+}
+.add-textfield:focused{
+    -fx-background-color:rgb(164, 163, 163) ;
+    -fx-border-width:2px;
+    -fx-background-radius:8px;
+    -fx-border-radius:0px 8px 0px 0px;
+    -fx-border-color:rgb(72, 63, 63);
+    
+}
+.serch{
+    -fx-padding:0px 0px 0px 20px;
+}
+.field-label{
+    -fx-font-family:"Agency FB";
+    -fx-font-size:1.2em;
+    -fx-text-fill:black;
+    -fx-alignment:CENTER;
+}
+.add-title{
+    -fx-text-fill:linear-gradient(to top right, rgb(17, 16, 16), rgb(158, 155, 155));
+    -fx-font-size:1.5em;
+    -fx-font-weight:bold;
+}
+.add-btns{
+    -fx-font-size:1.2em;
+    -fx-font-family:'Agency FB';
+    -fx-text-fill:white;
+}
+.insert{
+    -fx-background-color:rgb(3, 96, 18) ;
+}
+.insert:hover{
+    -fx-background-color:rgb(90, 198, 108) ;
+    -fx-cursor:hand;
+}
+.Update{
+    -fx-background-color:rgb(15, 102, 2) ;
+}
+.Update:hover{
+    -fx-background-color:rgb(93, 179, 80) ;
+    -fx-cursor:hand;
+}
+.delete{
+    -fx-background-color:rgb(174, 3, 3) ;
+}
+.delete:hover{
+    -fx-background-color:rgb(209, 89, 89) ;
+    -fx-cursor:hand;
+}
+.clear{
+    -fx-background-color:rgb(239, 176, 3) ;
+}
+.clear:hover{
+    -fx-background-color:rgb(230, 198, 112) ;
+    -fx-cursor:hand;
+}
+
+.table{
+    -fx-background-color:white;
+    -fx-background-radius:10px;
+    -fx-border-width:1px;
+    -fx-border-color: black;
+    -fx-border-radius:5px;
+}
+
+.table .column-header-background{
+    -fx-color:gray;
+    -fx-background-radius:10px 10px 0px 0px;
+}
+.table .column-header .label{
+    -fx-text-fill:white;
+    -fx-font-family:'Agency FB';
+    -fx-font-size:1.2em;
+}

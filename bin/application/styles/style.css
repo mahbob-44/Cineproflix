@@ -1,0 +1,22 @@
+.hello{
+    -fx-background-color:rgb(95, 175, 199) ;
+    -fx-text-fill:rgb(207, 37, 94);
+    -fx-font-size:50px;
+    -fx-alignment:CENTER; 
+    -fx-background-radius:20px;
+    -fx-border-width:1px;
+    -fx-border-color:rgb(252, 245, 245);
+    
+
+}
+.predict{
+    -fx-background-color:rgb(28, 215, 221);
+    -fx-background-radius:20px;
+    -fx-font-size:50px;
+    -fx-alignment:CENTER; 
+  
+
+}
+.hello:hover{
+    -fx-background-color:rgb(67, 78, 173);
+}

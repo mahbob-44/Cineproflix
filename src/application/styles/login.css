@@ -1,0 +1,75 @@
+.bg-form{
+    /* -fx-background-color:linear-gradient(to top right, #01513e,#11e5b3); */
+    -fx-background-color:#414142;
+    
+}
+.close{
+    -fx-background-color:transparent;
+    
+}
+.cross{
+    -fx-background-color:transparent;
+    
+}
+.close:hover{
+    -fx-background-color:rgb(108, 108, 108);
+    -fx-cursor:hand;
+}
+.cross:hover{
+    -fx-background-color:red;
+    -fx-cursor:hand;
+
+}
+.textfield{
+    -fx-border-width:0px 0px 1px 1px;
+    -fx-border-color:white;
+    -fx-background-color:transparent;
+    -fx-text-inner-color:white;
+}
+.textfield:focused{
+    -fx-border-width:0px 0px 1.5px 1.5px;
+}
+.login{
+    -fx-background-color:linear-gradient(to top right, #666c6b,#9c9f9f);
+    -fx-text-fill:linear-gradient(to top right,#0aeded,#e7f1f4);
+    -fx-font-size:1.5em;
+    -fx-font-weight:bold;
+    -fx-background-radius:20px;
+}
+
+.login:hover{
+    -fx-background-color:linear-gradient(to top right,#9c9f9f,#666c6b);
+    /* -fx-text-fill:#f1eeee; */
+    
+    -fx-font-family:times;
+    -fx-cursor:hand;
+}
+.login:focused{
+    -fx-background-color:#666c6b;
+    /* -fx-text-fill:#f1eeee; */
+    
+    -fx-font-family:times;
+}
+
+.label{
+    -fx-font-size:2em;
+    -fx-text-fill:linear-gradient(to top right,#0aeded,#e7f1f4);
+    -fx-font-family:"Arial";
+    -fx-font-weight:bold;
+    -fx-alignment:center;
+
+}
+
+.hyperlink{
+    -fx-underline:false;
+    -fx-text-fill:linear-gradient(to top right,#0aeded,#e7f1f4);;
+    /* -fx-font-family:"Sans-serif"; */
+    -fx-font-family: Georgia, serif;
+    -fx-font-size:15px;
+    /* -fx-background-color:red; */
+    /* -fx-background-radius:10px; */
+}
+
+.status{
+    -fx-text-fill:red;
+}
