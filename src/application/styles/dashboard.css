@@ -49,6 +49,11 @@
     -fx-background-radius: 10px; 
 }
 
+.bgground{
+    -fx-background-image:url('A.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 500px 545px;
+}
 
 .add-textfield{
     -fx-background-color:white ;
@@ -116,19 +121,35 @@
 }
 
 .table{
-    -fx-background-color:white;
+    -fx-background-color:transparent;
     -fx-background-radius:10px;
     -fx-border-width:1px;
     -fx-border-color: black;
     -fx-border-radius:5px;
+    -fx-opacity:0.8;
+    -fx-background-color:rgb(50, 214, 239);
+  
 }
-
+.table:hover{
+    -fx-background-color:rgb(244, 247, 247);
+    -fx-opacity:0.8;
+}
 .table .column-header-background{
-    -fx-color:gray;
+    -fx-color:rgb(4, 99, 147);
     -fx-background-radius:10px 10px 0px 0px;
 }
 .table .column-header .label{
     -fx-text-fill:white;
     -fx-font-family:'Agency FB';
     -fx-font-size:1.2em;
+}
+
+.bg-form{
+    /* -fx-background-color:linear-gradient(to top right, #01513e,#11e5b3); */
+    -fx-background-color:#414142;
+    
+}
+
+.dicount{
+    -fx-font-size:2em;
 }

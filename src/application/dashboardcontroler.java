@@ -89,6 +89,14 @@ public class dashboardcontroler implements Initializable{
     @FXML
     private Button signout;
 
+    @FXML
+    private TextField hall_no;
+
+    @FXML
+    private TextField seats;
+
+    
+
     // Tools for database
     private Connection connect;
     private PreparedStatement prepare;
@@ -109,7 +117,7 @@ public class dashboardcontroler implements Initializable{
             movie mov;
 
             while (result.next()) {
-                mov=new movie(result.getString("title"),result.getString("genre"),result.getString("duration"),result.getString("date"), result.getFloat("price"));
+                mov=new movie(result.getString("title"),result.getString("genre"),result.getString("duration"),result.getString("date"), result.getFloat("price"),result.getInt("seats"));
                 listdata.add(mov);
             }
             return listdata;
@@ -136,7 +144,7 @@ public class dashboardcontroler implements Initializable{
     @FXML
     public void insert(ActionEvent event){
         
-        String sql="insert into movie (title,genre,duration,date,price) values(?,?,?,?,?)";
+        String sql="insert into movie (title,genre,duration,date,price,seats,hall_no) values(?,?,?,?,?,?,?)";
         String sql1="select title from movie where title=?";
 
         connect=sqliteConnection.connector();
@@ -152,6 +160,8 @@ public class dashboardcontroler implements Initializable{
             prepare.setString(3, addmovie_duration.getText());
             prepare.setString(4, addmovie_date.getEditor().getText());
             prepare.setFloat(5, Float.parseFloat(addmovie_price.getText()));
+            prepare.setInt(6, Integer.parseInt(seats.getText()));
+            prepare.setInt(7, Integer.parseInt(hall_no.getText()));
 
             if(result.next()){
                 alert=new Alert(AlertType.ERROR);
@@ -181,7 +191,9 @@ public class dashboardcontroler implements Initializable{
         addmove_genre.setText("");
         addmovie_date.setValue(null);;
         addmovie_duration.setText("");
-        addmovie_price.setText("0");
+        addmovie_price.setText("");
+        seats.setText("");
+        hall_no.setText("");
     }
 
     @Override
@@ -222,4 +234,6 @@ public class dashboardcontroler implements Initializable{
             e.printStackTrace();
         }
     }
+
+    
 }

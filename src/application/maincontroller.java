@@ -222,9 +222,9 @@ public class maincontroller implements Initializable{
                     login_btn.getScene().getWindow().hide();
                     
                     
-                    dashboardcontroler.usrn=Login_username.getText();
                     result=prepare2.executeQuery();
                     if(result.next()){
+                        dashboardcontroler.usrn=Login_username.getText();
 
                         Stage stage=new Stage();
                         Parent root= FXMLLoader.load(getClass().getResource("/application/structure/dashboard.fxml"));
@@ -233,9 +233,13 @@ public class maincontroller implements Initializable{
                         stage.show();
                     }
                     else{
-                        
+                        userpaneldashboardcontroller.usrn=Login_username.getText();
+                        Stage stage=new Stage();
+                        Parent root= FXMLLoader.load(getClass().getResource("/application/structure/userpanel.fxml"));
+                        Scene scene=new Scene(root);
+                        stage.setScene(scene);
+                        stage.show();
                     }
-                    
                 }
                 else{
                     Alert alert=new Alert(AlertType.ERROR);

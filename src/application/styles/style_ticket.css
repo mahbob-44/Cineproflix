@@ -1,87 +1,100 @@
-.bground{
-    
+.bground {
+
     /* -fx-background-color:linear-gradient(to top right,#053330,#0170b9); */
     /* -fx-background-color:linear-gradient(to right, #9b701c, #ddd68e, #94610a); */
     /* -fx-background-color:linear-gradient(to right, #3b3b3b, #868685, #383837); */
-     -fx-background-image:url('studio3.jpg');
-    -fx-background-size: cover; 
-     -fx-background-repeat: no-repeat; 
-   
-   
+    -fx-background-image: url('bg.jpg');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-border-color: rgb(255, 223, 0);
+    -fx-border-width: 3px;
+    -fx-border-radius: 3px;
+
+
 }
-.name{
-    -fx-font-size:25px;
-    -fx-text-fill:rgb(255,223,0);
+
+.name {
+    -fx-font-size: 25px;
+    -fx-text-fill: rgb(255, 223, 0);
     -fx-font-family: "Brush Script MT", cursive;
-    -fx-font-weight : 700;
+    -fx-font-weight: 700;
     -fx-letter-spacing: 50px;
 
 
 }
-.mail{
-    -fx-font-size:25px;
-    -fx-text-fill:rgb(255,223,0);
+
+.mail {
+    -fx-font-size: 25px;
+    -fx-text-fill: rgb(255, 223, 0);
     -fx-font-family: "Brush Script MT", cursive;
-    -fx-font-weight : 700;
+    -fx-font-weight: 700;
     -fx-letter-spacing: 50px;
 
 }
-.number{
-    -fx-font-size:25px;
-    -fx-text-fill:rgb(255,223,0);
+
+.number {
+    -fx-font-size: 25px;
+    -fx-text-fill: rgb(255, 223, 0);
     -fx-font-family: "Brush Script MT", cursive;
-    -fx-font-weight : 700;
+    -fx-font-weight: 700;
     -fx-letter-spacing: 50px;
 }
-.total_price{
-    -fx-font-size:25px;
-    -fx-text-fill:rgb(255,223,0);
-    -fx-font-weight : 700;
+
+.total_price {
+    -fx-font-size: 25px;
+    -fx-text-fill: rgb(255, 223, 0);
+    -fx-font-weight: 700;
     -fx-font-family: "Brush Script MT", cursive;
     -fx-letter-spacing: 50px;
 }
-.Title{
-    -fx-font-size:40px;
-    -fx-text-fill:rgb(255,223,0);
-    -fx-font-weight : 700;
+
+.Title {
+    -fx-font-size: 40px;
+    -fx-text-fill: rgb(255, 223, 0);
+    -fx-font-weight: 700;
     -fx-font-family: "Agency FB", Arial, sans-serif;
-    -fx-alignment:CENTER; 
+    -fx-alignment: CENTER;
     -fx-letter-spacing: 50px;
 }
-.movie_name{
-    -fx-font-size:25px;
-    -fx-text-fill:rgb(255,223,0);
-    -fx-font-weight : 700;
+
+.movie_name {
+    -fx-font-size: 25px;
+    -fx-text-fill: rgb(255, 223, 0);
+    -fx-font-weight: 700;
     -fx-font-family: "Brush Script MT", cursive;
     -fx-letter-spacing: 50px;
 }
-.hall_no{
-    -fx-font-size:25px;
-    -fx-text-fill:rgb(255,223,0);
-    -fx-font-weight : 700;
+
+.hall_no {
+    -fx-font-size: 25px;
+    -fx-text-fill: rgb(255, 223, 0);
+    -fx-font-weight: 700;
     -fx-font-family: "Brush Script MT", cursive;
     -fx-letter-spacing: 50px;
 }
-.seat_num{
-    -fx-font-size:25px;
-    -fx-text-fill:rgb(255,223,0);
-    -fx-font-weight : 700;
+
+.seat_num {
+    -fx-font-size: 25px;
+    -fx-text-fill: rgb(255, 223, 0);
+    -fx-font-weight: 700;
     -fx-font-family: "Brush Script MT", cursive;
     -fx-letter-spacing: 50px;
 }
-.class_name{
-    -fx-font-size:25px;
-    -fx-text-fill:rgb(255,223,0);
-    -fx-font-weight : 700;
+
+.class_name {
+    -fx-font-size: 25px;
+    -fx-text-fill: rgb(255, 223, 0);
+    -fx-font-weight: 700;
     -fx-font-family: "Brush Script MT", cursive;
     -fx-letter-spacing: 5px;
     -fx-letter-spacing: 50px;
 }
-.date{
-    -fx-font-size:25px;
-    -fx-text-fill:rgb(255,223,0);
-    -fx-font-weight : 700;
+
+.date {
+    -fx-font-size: 25px;
+    -fx-text-fill: rgb(255, 223, 0);
+    -fx-font-weight: 700;
     -fx-font-family: "Brush Script MT", cursive;
     -fx-letter-spacing: 20px;
-    
+
 }
