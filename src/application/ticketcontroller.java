@@ -48,7 +48,14 @@ public class ticketcontroller implements Initializable{
     private ResultSet result;
     private ResultSet result2;
     private Statement statement;
-
+    private String generate_seat_number(int st){
+        int num=65+st/10;
+        st=48+st%10+1;
+        char ch=(char)num;
+        char chh=(char)st;
+        String str=String.valueOf(ch)+String.valueOf(chh);
+        return str;
+    }
     @Override 
     public void initialize(URL location, ResourceBundle resourceBundle){
         if(controller.winner.equals("X")){
@@ -86,7 +93,9 @@ public class ticketcontroller implements Initializable{
                     hall_number.setText(String.valueOf(result2.getInt("hall_no")));
                     movie_name.setText(result2.getString("title"));
                     total_price.setText(String.valueOf(Float.parseFloat(result2.getString("price"))-50));
-                    // seat_number.setText(String.valueOf(51-Integer.parseInt(result2.getString("seats"))));
+                    int seat=Integer.parseInt(result2.getString("seats"));
+                    String s_num=generate_seat_number(seat);
+                    seat_number.setText(s_num);
                     decrese(Integer.parseInt(result2.getString("seats"))-1);
                 }
 
@@ -127,8 +136,10 @@ public class ticketcontroller implements Initializable{
                     hall_number.setText(String.valueOf(result2.getInt("hall_no")));
                     movie_name.setText(result2.getString("title"));
                     total_price.setText(String.valueOf(Float.parseFloat(result2.getString("price"))));
+                    int seat=Integer.parseInt(result2.getString("seats"));
+                    String s_num=generate_seat_number(seat);
+                    seat_number.setText(s_num);
                     decrese(Integer.parseInt(result2.getString("seats"))-1);
-                    // seat_number.setText(String.valueOf(51-Integer.parseInt(result2.getString("seats"))));
                 }
 
             } catch (Exception e) {
@@ -136,7 +147,7 @@ public class ticketcontroller implements Initializable{
             }
         }
     }
-
+    
     public void decrese(int seat){
         if(seat>=0){
             String sql="UPDATE movie set seats=? where title=?";

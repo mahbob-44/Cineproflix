@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -24,6 +25,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -93,6 +96,9 @@ public class userpaneldashboardcontroller implements Initializable{
     private Label username;
 
     @FXML
+    private ImageView image_view;
+
+    @FXML
     void buy_ticekt(ActionEvent event) {
         String sql="select title and genre from movie where title=? and genre=?";
         connect=sqliteConnection.connector();
@@ -125,6 +131,7 @@ public class userpaneldashboardcontroller implements Initializable{
     void buy_clear(ActionEvent event) {
         buyticket_title.setText("");
         buyticket_genre.setText("");
+        image_view.setImage(null);
     }
 
     private ObservableList<movie> listmovies(){
@@ -138,7 +145,7 @@ public class userpaneldashboardcontroller implements Initializable{
             movie mov;
 
             while (result.next()) {
-                mov=new movie(result.getString("title"),result.getString("genre"),result.getString("duration"),result.getString("date"), result.getFloat("price"),result.getInt("seats"));
+                mov=new movie(result.getString("title"),result.getString("genre"),result.getString("duration"),result.getString("date"), result.getFloat("price"),result.getInt("seats"),result.getInt("hall_no"),result.getString("image"));
                 listdata.add(mov);
             }
             return listdata;
@@ -163,6 +170,23 @@ public class userpaneldashboardcontroller implements Initializable{
         movielist.setItems(listadded);
     }
 
+    @FXML
+    void getItem(MouseEvent event) {
+
+        movie movd=movielist.getSelectionModel().getSelectedItem();
+        int num=movielist.getSelectionModel().getSelectedIndex();
+        if(num-1<-1){
+            return;
+        }
+        buyticket_title.setText(movd.get_name());
+        buyticket_genre.setText(movd.get_genre());
+
+        Image img;
+        String url="file:"+movd.get_image();
+
+        img=new Image(url,200,250,false,true);
+        image_view.setImage(img);
+    }
     @FXML
     void dont_go_to_game(ActionEvent event) {
         try {

@@ -15,17 +15,21 @@ public class movie {
     public  String date;
     public float price;
     public int seats;
+    public int hall_no;
+    public String image;
 
     /**
      * 
      */
-    public movie(String name, String genre, String duration, String date, float price, int seats){
+    public movie(String name, String genre, String duration, String date, float price, int seats, int hall_no, String img){
         this.name=name;
         this.genre=genre;
         this.duration=duration;
         this.date=date;
         this.price=price;
         this.seats=seats;
+        this.hall_no=hall_no;
+        this.image=img;
     }
     
     public String get_name(){
@@ -45,5 +49,12 @@ public class movie {
     }
     public int get_seats(){
         return seats;
+    }
+    public int get_hall_no(){
+        return hall_no;
+    }
+
+    public String get_image(){
+        return image;
     }
 }

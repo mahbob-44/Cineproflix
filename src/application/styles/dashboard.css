@@ -52,7 +52,8 @@
 .bgground{
     -fx-background-image:url('A.jpg');
     -fx-background-repeat: no-repeat;
-    -fx-background-size: 500px 545px;
+    -fx-background-size: 500px 580px;
+    -fx-background-radius:8px;
 }
 
 .add-textfield{
@@ -63,6 +64,7 @@
     -fx-text-fill:rgb(12, 12, 12);
     -fx-font-family:'Agency FB';
     -fx-font-size:1.2em;
+    -fx-font-weight:bold;
 }
 .add-textfield:focused{
     -fx-background-color:rgb(164, 163, 163) ;
@@ -79,6 +81,7 @@
     -fx-font-family:"Agency FB";
     -fx-font-size:1.2em;
     -fx-text-fill:black;
+    -fx-font-weight:bold;
     -fx-alignment:CENTER;
 }
 .add-title{
@@ -89,6 +92,7 @@
 .add-btns{
     -fx-font-size:1.2em;
     -fx-font-family:'Agency FB';
+    -fx-font-weight:bold;
     -fx-text-fill:white;
 }
 .insert{
@@ -99,10 +103,10 @@
     -fx-cursor:hand;
 }
 .Update{
-    -fx-background-color:rgb(15, 102, 2) ;
+    -fx-background-color:rgb(1, 37, 84) ;
 }
 .Update:hover{
-    -fx-background-color:rgb(93, 179, 80) ;
+    -fx-background-color:rgb(80, 113, 179) ;
     -fx-cursor:hand;
 }
 .delete{
@@ -113,10 +117,10 @@
     -fx-cursor:hand;
 }
 .clear{
-    -fx-background-color:rgb(239, 176, 3) ;
+    -fx-background-color:rgb(231, 113, 2) ;
 }
 .clear:hover{
-    -fx-background-color:rgb(230, 198, 112) ;
+    -fx-background-color:rgb(234, 172, 79) ;
     -fx-cursor:hand;
 }
 
@@ -152,4 +156,8 @@
 
 .dicount{
     -fx-font-size:2em;
+}
+
+.img{
+    -fx-border-radius:8px;
 }
