@@ -239,6 +239,7 @@ public class dashboardcontroler implements Initializable{
                 alert.setTitle("Information Message!");
                 alert.setContentText("The movie "+addmovie_title.getText()+" is added Successfully");
                 show_list();
+                clear();
             }
 
         } catch (Exception e) {
@@ -281,6 +282,7 @@ public class dashboardcontroler implements Initializable{
                 alert.setContentText("The movie "+addmovie_title.getText()+" is Updated successfully.");
                 alert.showAndWait();
                 show_list();
+                clear();
             }
             else{
                 alert=new Alert(AlertType.ERROR);
